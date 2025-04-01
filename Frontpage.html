@@ -13,6 +13,9 @@
             document.getElementById("content").innerHTML = document.getElementById(sectionId).innerHTML;
             toggleSidebar();
         }
+        function goBackToCategory() {
+            showSection('category');
+        }
     </script>
     <style>
         body {
@@ -97,6 +100,18 @@
             padding: 10px;
             border-radius: 10px;
         }
+        .exit-btn {
+            background-color: #16213e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .exit-btn:hover {
+            background-color: #0f3460;
+        }
     </style>
 </head>
 <body>
@@ -140,24 +155,94 @@
             <input type="text" id="search-bar" placeholder="Search characters...">
         </section>
         <section id="naruto">
-            <h2>Naruto</h2>
-            <p>Explore characters from Naruto.</p>
+            <button class="exit-btn" onclick="showSection('category')">Back to Category</button>
+            <h2>Naruto Characters</h2>
+            
+            <div class="character-grid">
+                <div>
+                    <img src="animelogo/naruto1.jpg" alt="Naruto" class="character-image">
+                    <p>Naruto</p>
+                </div>
+                <div>
+                    <img src="animelogo/sasuke1.jpg" alt="Sasuke" class="character-image">
+                    <p>Sasuke</p>
+                </div>
+                <div>
+                    <img src="animelogo/sakura1.jpg" alt="Sakura" class="character-image">
+                    <p>Sakura</p>
+                </div>
+                <div>
+                    <img src="animelogo/kakashi1.jpg" alt="Kakashi" class="character-image">
+                    <p>Kakashi</p>
+                </div>
+                <div>
+                    <img src="animelogo/neji1.jpg" alt="Neji" class="character-image">
+                    <p>Neji</p>
+                </div>
+                <div>
+                    <img src="animelogo/hinata1.png" alt="Hinata" class="character-image">
+                    <p>Hinata</p>
+                </div>
+                <div>
+                    <img src="animelogo/jiraya1.png" alt="Jiraiya" class="character-image">
+                    <p>Jiraiya</p>
+                </div>
+                <div>
+                    <img src="animelogo/orichimaru1.jpg" alt="Orochimaru" class="character-image">
+                    <p>Orochimaru</p>
+                </div>
+                <div>
+                    <img src="animelogo/rockelee1.png" alt="Rock Lee" class="character-image">
+                    <p>Rock Lee</p>
+                </div>
+            </div>
         </section>
+         
         <section id="onepiece">
-            <h2>One Piece</h2>
-            <p>Explore characters from One Piece.</p>
+            <button class="exit-btn" onclick="goBackToCategory()">Back to Category</button>
+            <h2>One Piece Characters</h2>
+            <ul>
+                <li>Luffy</li>
+                <li>Zoro</li>
+                <li>Nami</li>
+                <li>Sanji</li>
+                <li>Usopp</li>
+                <li>Chopper</li>
+                <li>Robin</li>
+                <li>Franky</li>
+                <li>Brook</li>
+            </ul>
         </section>
         <section id="blackclover">
-            <h2>Black Clover</h2>
-            <p>Explore characters from Black Clover.</p>
+            <button class="exit-btn" onclick="goBackToCategory()">Back to Category</button>
+            <h2>Black Clover Characters</h2>
+            <ul>
+                <li>Asta</li>
+                <li>Yuno</li>
+                <li>Julius</li>
+                <li>Charmy</li>
+                <li>Magna</li>
+            </ul>
         </section>
         <section id="sololeveling">
-            <h2>Solo Leveling</h2>
-            <p>Explore characters from Solo Leveling.</p>
+            <button class="exit-btn" onclick="goBackToCategory()">Back to Category</button>
+            <h2>Solo Leveling Characters</h2>
+            <ul>
+                <li>Jinwoo</li>
+                <li>Cha Hae-In</li>
+                <li>Seo Jinwoo</li>
+            </ul>
         </section>
         <section id="jujutsukaisen">
-            <h2>Jujutsu Kaisen</h2>
-            <p>Explore characters from Jujutsu Kaisen.</p>
+            <button class="exit-btn" onclick="goBackToCategory()">Back to Category</button>
+            <h2>Jujutsu Kaisen Characters</h2>
+            <ul>
+                <li>Yuji</li>
+                <li>Satoru Gojo</li>
+                <li>Megumi</li>
+                <li>Nobara</li>
+                <li>Fushiguro</li>
+            </ul>
         </section>
     </div>
     <script src="script.js"></script>
