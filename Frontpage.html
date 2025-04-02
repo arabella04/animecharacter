@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Characters</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <script>
         function toggleSidebar() {
             document.getElementById("sidebar").classList.toggle("active");
@@ -159,24 +160,45 @@
             <h2>Naruto Characters</h2>
             
             <div class="character-grid">
-                <div>
-                    <img src="animelogo/naruto1.jpg" alt="Naruto" class="character-image">
+                <div onclick="openNarutoProfile()">
+                    <img src="animelogo/naruto1.png" alt="Naruto" class="character-image">
                     <p>Naruto</p>
                 </div>
+                
+                
+                <!-- Naruto Profile (Initially Hidden) -->
+                <div id="naruto-profile" class="profile-container">
+                    <button class="back-btn" onclick="closeNarutoProfile()">⮜ Back</button>
+                    <div class="profile-content">
+                        <video width="600" controls>
+                            <source src="video/naruto.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h2>Naruto Uzumaki</h2>
+                        <p><strong>Full Name:</strong> Naruto Uzumaki</p>
+                        <p><strong>Parents:</strong> Minato Namikaze & Kushina Uzumaki</p>
+                        <p><strong>Village:</strong> Hidden Leaf Village</p>
+                        <p><strong>Rank:</strong> Hokage</p>
+                        <p><strong>Special Abilities:</strong> Rasengan, Shadow Clone Jutsu, Sage Mode, Kurama Chakra Mode</p>
+                    </div>
+                </div>
+
+                
+                
                 <div>
-                    <img src="animelogo/sasuke1.jpg" alt="Sasuke" class="character-image">
+                    <img src="animelogo/sasuke1.png" alt="Sasuke" class="character-image">
                     <p>Sasuke</p>
                 </div>
                 <div>
-                    <img src="animelogo/sakura1.jpg" alt="Sakura" class="character-image">
+                    <img src="animelogo/sakura1.png" alt="Sakura" class="character-image">
                     <p>Sakura</p>
                 </div>
                 <div>
-                    <img src="animelogo/kakashi1.jpg" alt="Kakashi" class="character-image">
+                    <img src="animelogo/kakashi1.png" alt="Kakashi" class="character-image">
                     <p>Kakashi</p>
                 </div>
                 <div>
-                    <img src="animelogo/neji1.jpg" alt="Neji" class="character-image">
+                    <img src="animelogo/neji1.png" alt="Neji" class="character-image">
                     <p>Neji</p>
                 </div>
                 <div>
@@ -188,12 +210,16 @@
                     <p>Jiraiya</p>
                 </div>
                 <div>
-                    <img src="animelogo/orichimaru1.jpg" alt="Orochimaru" class="character-image">
+                    <img src="animelogo/orichimaru1.png" alt="Orochimaru" class="character-image">
                     <p>Orochimaru</p>
                 </div>
                 <div>
                     <img src="animelogo/rockelee1.png" alt="Rock Lee" class="character-image">
                     <p>Rock Lee</p>
+                </div>
+                <div>
+                    <img src="animelogo/itachi1.png" alt="Itachi" class="character-image">
+                    <p>Itachi</p>
                 </div>
             </div>
         </section>
