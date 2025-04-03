@@ -1,34 +1,113 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a2e;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: none;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background.active {
+    display: block;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    background: rgba(15, 52, 96, 0.95);
+    color: white;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+/* Show sidebar on hover */
+.hover-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    z-index: 999;
+}
+
+.hover-area:hover + .sidebar,
+.sidebar:hover {
+    left: 0;
+}
+
+.anime-choice {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.anime-choice:hover {
+    background: rgba(22, 33, 62, 0.8);
+    padding-left: 25px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.content-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Existing styles */
 .character-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    text-align: center;
-    margin-top: 20px;
+    justify-items: center;
 }
 
 .character-image {
     width: 150px;
     height: 200px;
     object-fit: contain;
-        background: none; /* Remove background */
-        mix-blend-mode: normal; /* Ensures the image blends naturally */
-        padding: 10px;
+    background: none;
+    mix-blend-mode: normal;
+    padding: 10px;
     border-radius: 10px;
-    
 }
 
-.character-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 images per row */
-    gap: 20px; /* Spacing between images */
-    justify-items: center;
-}
-
-.character-grid img {
-    max-height: 250px; /* Increase size */
-    width: auto; /* Maintain aspect ratio */
-}
-/* Profile Screen Styling */
 .profile-container {
     position: fixed;
     top: 0;
@@ -45,6 +124,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
+    z-index: 1001;
 }
 
 .profile-container.active {
@@ -52,7 +132,6 @@
     pointer-events: auto;
 }
 
-/* Back Button */
 .back-btn {
     position: absolute;
     top: 20px;
@@ -68,25 +147,4 @@
 
 .back-btn:hover {
     background: #ffaa00;
-}
-
-
-.character-grid img[alt="Sakura"] {
-    max-height: 200px; /* Same as Naruto */
-}
-
-
-.exit-btn {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 15px;
-    background: #ff4c4c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.exit-btn:hover {
-    background: #d63434;
 }
