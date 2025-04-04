@@ -27,6 +27,14 @@ function openNarutoProfile() {
 function closeNarutoProfile() {
     document.getElementById("naruto-profile").classList.remove("active");
 }
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px"; // Close sidebar
+    } else {
+        sidebar.style.left = "0px"; // Open sidebar
+    }
+}
 
 // Initialize hover events when document loads
 document.addEventListener('DOMContentLoaded', () => {
