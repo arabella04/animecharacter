@@ -13,8 +13,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    display: none;
+    z-index: -1; /* Puts it behind everything */
 }
 
 .video-background video {
@@ -34,28 +33,25 @@ body {
     left: -250px;
     top: 0;
     height: 100%;
-    background: rgba(15, 52, 96, 0.95);
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(20px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(20px); /* For Safari */
+    border-right: 2px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Glass reflection */
     color: white;
     padding-top: 60px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     z-index: 1000;
 }
 
-/* Show sidebar on hover */
-.hover-area {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 999;
-}
-
+/* Make sidebar slide in when hovered */
 .hover-area:hover + .sidebar,
 .sidebar:hover {
     left: 0;
+    backdrop-filter: blur(25px); /* Slightly stronger blur when active */
 }
 
+/* Menu Items Styling */
 .anime-choice {
     display: block;
     color: white;
@@ -64,10 +60,11 @@ body {
     cursor: pointer;
     transition: 0.3s;
     font-size: 18px;
+    border-radius: 10px;
 }
 
 .anime-choice:hover {
-    background: rgba(22, 33, 62, 0.8);
+    background: rgba(255, 255, 255, 0.2);
     padding-left: 25px;
 }
 
